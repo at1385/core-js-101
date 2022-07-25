@@ -238,7 +238,7 @@ function getRectangleString(width, height) {
 function encodeToRot13(str) {
   const engAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
   const rot13Alphabet = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
-  return [...str].map((item) => (engAlphabet.indexOf(item) > -1 ? rot13Alphabet[engAlphabet.indexOf(item)] : item)).join('');
+  return [...str].map((item) => ((engAlphabet.indexOf(item) > -1) ? rot13Alphabet[engAlphabet.indexOf(item)] : item)).join('');
 }
 
 /**
